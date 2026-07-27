@@ -242,9 +242,9 @@ bindsym $mod+d mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#	status_command waybar
-#}
+bar {
+	status_command waybar
+}
 include /etc/sway/config.d/*
 
 workspace_layout default
