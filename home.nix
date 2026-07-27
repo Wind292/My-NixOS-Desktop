@@ -44,7 +44,7 @@ in
       };
       interactiveShellInit = ''
         set -g fish_greeting
-        ssh-add ~/.ssh/id_ed25519.pub
+        ssh-add -q ~/.ssh/id_ed25519.pub
 
         function rebuild 
           sudo git -C /etc/nixos/ add . 
