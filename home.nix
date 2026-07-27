@@ -36,18 +36,35 @@ in
     };
   };
 
+  services.ssh-agent.enable = true;
+
   programs.fish = {
       enable = true;
       shellAliases = {
-        rebuild = "sudo git -C /etc/nixos/ add . && sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure";
       };
       interactiveShellInit = ''
         set -g fish_greeting
+        ssh-add ~/.ssh/id_ed25519.pub
+
+        function rebuild 
+          sudo git -C /etc/nixos/ add . 
+          git -C /etc/nixos/ commit -m "$(date)" 
+
+          tig -C /etc/nixos/
+          read -l -P "Continue with rebuild? [y/N] " confirm
+          if not test "$confirm" = "n" -o "$confirm" = "N"
+            git -C /etc/nixos/ push -u origin master & disown
+            sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure
+          end
+
+        end
+
         function add
           if test -z "$argv[1]"
             echo "Usage: add <package>"
             return 1
           end
+
           sudo nix-editor -i -a "$argv[1]" /etc/nixos/home.nix home.packages
         end
 
