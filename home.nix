@@ -105,7 +105,7 @@ in
   fonts.fontconfig.enable = true;
 
   xdg.configFile."sway/config".source = ./sway/config;
-  xdg.configFile."waybar/config".source = ./waybar/config;
+  xdg.configFile."waybar/config".source = ./waybar/*;
 
   home.packages = with pkgs; [
     alacritty
