@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-    background-color: #32323200; /* bar background */
-    color: #ffffff;              /* statusline */
+    background-color: #32323200; 
+    color: #ffffff;         
 }
 
 #clock {
@@ -13,24 +13,21 @@ window#waybar {
     padding: 0 10px;
 }
 
-/* Workspace buttons: sway's "border background text" maps to
-   border-color / background-color / color below */
-
 #workspaces button {
-    border: 2px solid #32323200;   /* inactive_workspace border */
-    background-color: #32323200;   /* inactive_workspace background */
-    color: #5c5c5c;                /* inactive_workspace text */
+    border: 2px solid #32323200;   
+    background-color: #32323200;  
+    color: #5c5c5c;             
     padding: 0 8px;
 }
 
 #workspaces button.visible {
-    border: 2px solid #434343;     /* active_workspace border */
-    background-color: #5f676a00;   /* active_workspace background */
-    color: #ffffff;                /* active_workspace text */
+    border: 2px solid #434343;   
+    background-color: #5f676a00;  
+    color: #ffffff;               
 }
 
 #workspaces button.focused {
-    border: 2px solid #9c7899;     /* focused_workspace border */
-    background-color: #46465200;   /* focused_workspace background */
-    color: #ffffff;                /* focused_workspace text */
+    border: 2px solid #9c7899;    
+    background-color: #46465200; 
+    color: #ffffff;               
 }
