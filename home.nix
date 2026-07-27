@@ -104,9 +104,10 @@ in
 
   fonts.fontconfig.enable = true;
 
-  xdg.configFile."sway/config".source = ./sway/config;
-  xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
-  xdg.configFile."waybar/style.css".source = ./waybar/style.css;
+
+  xdg.configFile."sway/config".source = config.lib.file.mkOutOfStoreSymlink "~/.config/sway/config";
+  xdg.configFile."waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "~/.config/waybar/style.css";
+  xdg.configFile."waybar/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink "~/.config/waybar/config.jsonc";
 
   home.packages = with pkgs; [
     alacritty
