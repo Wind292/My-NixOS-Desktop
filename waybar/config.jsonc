@@ -12,7 +12,7 @@
     // Replaces: status_command while date +'%-m-%-d %X'; do sleep 1; done
     "clock": {
         "interval": 1,
-        "format": "{:%A, %d %B %Y (%R)}"
+        "format": "{:%A, %d %B %Y %R)"
     },
     "tray": {
         "icon-size": 21,
