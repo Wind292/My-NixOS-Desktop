@@ -1,0 +1,28 @@
+* {
+    color: #ffffff;
+    background: transparent;
+}
+
+window#waybar {
+    background: rgba(50, 50, 50, 0);
+}
+
+#workspaces button {
+    color: #5c5c5c;
+    background: rgba(50, 50, 50, 0);
+}
+
+#workspaces button.focused {
+    background: rgba(70, 70, 82, 0);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background: rgba(67, 67, 67, 0);
+    color: #ffffff;
+}
+
+#clock,
+#custom-notification {
+    padding: 0 10px;
+}

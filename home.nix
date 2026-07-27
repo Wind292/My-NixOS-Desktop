@@ -105,6 +105,7 @@ in
   fonts.fontconfig.enable = true;
 
   xdg.configFile."sway/config".source = ./sway/config;
+  xdg.configFile."waybar/config".source = ./waybar/config;
 
   home.packages = with pkgs; [
     alacritty
@@ -137,6 +138,9 @@ in
     vscodium
     nix-search-tv
     inputs.nix-editor.packages.${pkgs.system}.default
+    waybar
+    swaynotificationcenter
+
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -151,7 +155,6 @@ in
     flameshot
     ksnip
     satty
-    swaynotificationcenter
     libnotify
   ];
 

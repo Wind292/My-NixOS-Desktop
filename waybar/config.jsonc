@@ -1,0 +1,29 @@
+{
+  "position": "top",
+
+  "modules-left": [
+    "sway/workspaces"
+  ],
+
+  "modules-center": [],
+
+  "modules-right": [
+    "custom/notification",
+    "clock"
+  ],
+
+  "clock": {
+    "format": "{:%-m-%-d %X}"
+  },
+
+  "custom/notification": {
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰂚",
+      "none": "󰂜"
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t"
+  }
+}
