@@ -8,6 +8,12 @@ in
   home.username = "jp3";
   home.homeDirectory = "/home/jp3";
 
+
+  i18n.supportedLocales = [
+    "en_US.UTF-8/UTF-8"
+    "zh_CN.UTF-8/UTF-8"
+    "ja_JP.UTF-8/UTF-8"
+  ];
   #screen sharing
   xdg.portal = {
     enable = true;
@@ -112,7 +118,9 @@ in
   };
 
   fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
 
+  ];
 
   xdg.configFile."sway/config".source = ./sway/config;
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
@@ -146,6 +154,7 @@ in
     swayfx
     swaylock-effects
     nerd-fonts.dejavu-sans-mono
+    noto-fonts-cjk-sans
     easyeffects
     vscodium
     nix-search-tv
