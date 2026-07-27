@@ -103,7 +103,7 @@ output DP-2 pos 2560 0 mode 3440x1440@100Hz
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    bindsym $mod+Shift+i exec waybar 
+    bindsym $mod+Shift+i exec waybar Z
 
 
     # Exit sway (logs you out of your Wayland session)
@@ -250,6 +250,9 @@ bindsym $mod+d mode "resize"
 #bar {
 #	status_command waybar
 #}
+
+exec waybar
+
 include /etc/sway/config.d/*
 
 workspace_layout default

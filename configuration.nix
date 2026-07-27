@@ -95,6 +95,7 @@
     cron
     tailscale
     slurp
+    waybar
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
