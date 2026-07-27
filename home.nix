@@ -36,6 +36,23 @@ in
     };
   };
 
+  services.swaync = {
+    enable = true;
+
+    settings = {
+      positionX = "right";
+      positionY = "top";
+      layer = "overlay";
+
+      control-center-width = 500;
+      notification-window-width = 400;
+
+      timeout = 10;
+      timeout-low = 5;
+      timeout-critical = 0;
+    };
+  };
+
   services.ssh-agent.enable = true;
 
   programs.fish = {
@@ -51,10 +68,9 @@ in
           git -C /etc/nixos/ commit -m "$(date)" 
 
           tig -C /etc/nixos/ show
-          read -l -P "Continue with rebuild? [y/N] " confirm
-          if not test "$confirm" = "n" -o "$confirm" = "N"
-            sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure 
-            and git -C /etc/nixos/ push -u origin master > /dev/null 2>&1 & 
+          if read -l -P "Continue with rebuild? [y/N] " confirm; and not test "$confirm" = "n" -o "$confirm" = "N"
+            sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure
+            and git -C /etc/nixos/ push -u origin master > /dev/null 2>&1 &
             disown
           end
         end
