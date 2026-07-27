@@ -55,6 +55,7 @@ in
           if not test "$confirm" = "n" -o "$confirm" = "N"
             sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure 
             and git -C /etc/nixos/ push -u origin master
+            echo ""
           end
         end
 
