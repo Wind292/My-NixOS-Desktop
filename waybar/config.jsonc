@@ -3,7 +3,7 @@
 
     "modules-left": ["sway/workspaces"],
     "modules-center": [],
-    "modules-right": ["clock"],
+    "modules-right": ["clock", "tray"],
 
     "sway/workspaces": {
         "disable-scroll": true
