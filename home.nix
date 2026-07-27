@@ -53,10 +53,9 @@ in
           tig -C /etc/nixos/ show
           read -l -P "Continue with rebuild? [y/N] " confirm
           if not test "$confirm" = "n" -o "$confirm" = "N"
-            git -C /etc/nixos/ push -u origin master & disown
-            sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure
+            sudo NIXPKGS_ALLOW_UNFREE='1' nixos-rebuild switch --flake /etc/nixos/ --impure 
+            and git -C /etc/nixos/ push -u origin master & disown
           end
-
         end
 
         function add
