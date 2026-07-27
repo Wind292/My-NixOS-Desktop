@@ -1,29 +1,17 @@
 {
-  "position": "top",
+    "position": "top",
 
-  "modules-left": [
-    "sway/workspaces"
-  ],
+    "modules-left": ["sway/workspaces"],
+    "modules-center": [],
+    "modules-right": ["clock"],
 
-  "modules-center": [],
-
-  "modules-right": [
-    "custom/notification",
-    "clock"
-  ],
-
-  "clock": {
-    "format": "{:%-m-%-d %X}"
-  },
-
-  "custom/notification": {
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󰂚",
-      "none": "󰂜"
+    "sway/workspaces": {
+        "disable-scroll": true
     },
-    "return-type": "json",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t"
-  }
+
+    // Replaces: status_command while date +'%-m-%-d %X'; do sleep 1; done
+    "clock": {
+        "interval": 1,
+        "format": "{:%-m-%-d %I:%M:%S %p}"
+    }
 }
