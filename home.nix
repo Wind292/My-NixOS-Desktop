@@ -106,11 +106,12 @@ in
   fonts.fontconfig.enable = true;
 
 
-  # xdg.configFile."sway/config".source = ./sway/config;
+  xdg.configFile."sway/config".source = ./sway/config;
   # xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
   # xdg.configFile."waybar/style.css".source = ./waybar/style.css;
 
-  xdg.configFile."sway/config".source = mkOutOfStoreSymlink "/home/jp3/.config/sway/config";
+  # xdg.configFile."sway/config".source = mkOutOfStoreSymlink "/home/jp3/.config/sway/config";
+
   xdg.configFile."waybar/config.jsonc".source = mkOutOfStoreSymlink "/home/jp3/.config/waybar/config.jsonc";
   xdg.configFile."waybar/style.css".source = mkOutOfStoreSymlink "/home/jp3/.config/waybar/style.css";
 
