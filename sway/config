@@ -269,4 +269,4 @@ blur_xray disable
 blur_passes 2
 blur_radius 10
 blur_contrast 1.4
-exec waybar
+exec waybar & disown
