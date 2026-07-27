@@ -118,9 +118,6 @@ in
   };
 
   fonts.fontconfig.enable = true;
-  fonts.packages = with pkgs; [
-
-  ];
 
   xdg.configFile."sway/config".source = ./sway/config;
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
