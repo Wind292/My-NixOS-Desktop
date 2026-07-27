@@ -14,20 +14,31 @@ window#waybar {
 }
 
 #workspaces button {
-    border: 2px solid rgba(50, 50, 50, 0);   /* inactive_workspace border: #32323200 */
+    border: 1.5px solid rgba(50, 50, 50, 0);   /* inactive_workspace border: #32323200 */
     background-color: rgba(50, 50, 50, 0);   /* inactive_workspace background: #32323200 */
     color: rgba(92, 92, 92, 1);              /* inactive_workspace text: #5c5c5c */
-    padding: 0 3px;
+    font-weight: bold;
+    padding: 0px 2px;
 }
 
+#tray {
+	margin-top: 3px;
+	margin-bottom: 0px;
+	background-color: rgba(65, 60, 75, 30);
+	padding: 0px 5px;
+	border-radius: 7px;
+}
+
+
+
 #workspaces button.visible {
-    border: 2px solid rgba(67, 67, 67, 1);   /* active_workspace border: #434343 */
+    border: 1.5px solid rgba(67, 67, 67, 1);   /* active_workspace border: #434343 */
     background-color: rgba(95, 103, 106, 0); /* active_workspace background: #5f676a00 */
     color: rgba(255, 255, 255, 1);           /* active_workspace text: #ffffff */
 }
 
 #workspaces button.focused {
-    border: 2px solid rgba(156, 120, 153, 1);/* focused_workspace border: #9c7899 */
+    border: 1.5px solid rgba(156, 120, 153, 1);/* focused_workspace border: #9c7899 */
     background-color: rgba(70, 70, 82, 0);   /* focused_workspace background: #46465200 */
     color: rgba(255, 255, 255, 1);           /* focused_workspace text: #ffffff */
 }

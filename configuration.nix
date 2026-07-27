@@ -22,6 +22,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   }; 
 
+  services.dbus.enable = true;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -108,8 +108,8 @@ in
 
 
   xdg.configFile."sway/config".source = ./sway/config;
-  xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
+  xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
 
 
   home.packages = with pkgs; [
