@@ -55,8 +55,8 @@ in
   };
 
   home.pointerCursor = {
-	name = "phinger-cursors-dark";
-	package = pkgs.phinger-cursors;
+	name = "DMZ-Black";
+	package = pkgs.vanilla-dmz;
 	size = 32;
 	gtk.enable = true;
   };
@@ -169,6 +169,7 @@ in
     satty
     libnotify
     aonsoku
+    vanilla-dmz
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
