@@ -250,8 +250,8 @@ bindsym $mod+d mode "resize"
 #bar {
 #	status_command waybar
 #}
-
-exec waybar
+exec_always touch /home/jp3/newfile.txt
+exec_always waybar
 
 include /etc/sway/config.d/*
 
