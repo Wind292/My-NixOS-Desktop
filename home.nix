@@ -50,7 +50,7 @@ in
           sudo git -C /etc/nixos/ add . 
           git -C /etc/nixos/ commit -m "$(date)" 
 
-          tig -C /etc/nixos/
+          tig -C /etc/nixos/ diff
           read -l -P "Continue with rebuild? [y/N] " confirm
           if not test "$confirm" = "n" -o "$confirm" = "N"
             git -C /etc/nixos/ push -u origin master & disown
