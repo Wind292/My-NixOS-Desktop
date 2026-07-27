@@ -110,9 +110,9 @@ in
   # xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
   # xdg.configFile."waybar/style.css".source = ./waybar/style.css;
 
-  xdg.configFile."sway/config".source = mkOutOfStoreSymlink "~/.config/sway/config";
-  xdg.configFile."waybar/config.jsonc".source = mkOutOfStoreSymlink "~/.config/waybar/config.jsonc";
-  xdg.configFile."waybar/style.css".source = mkOutOfStoreSymlink "~/.config/waybar/style.css";
+  xdg.configFile."sway/config".source = mkOutOfStoreSymlink "/home/jp3/.config/sway/config";
+  xdg.configFile."waybar/config.jsonc".source = mkOutOfStoreSymlink "/home/jp3/.config/waybar/config.jsonc";
+  xdg.configFile."waybar/style.css".source = mkOutOfStoreSymlink "/home/jp3/.config/waybar/style.css";
 
 
   home.packages = with pkgs; [
