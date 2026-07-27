@@ -152,6 +152,7 @@ in
     ksnip
     satty
     swaynotificationcenter
+    libnotify
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
