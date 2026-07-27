@@ -37,8 +37,6 @@ in
     };
   };
 
-  programs.wayabr.enable = true;
-
   services.swaync = {
     enable = true;
 
@@ -55,6 +53,7 @@ in
       timeout-critical = 0;
     };
   };
+
 
   services.ssh-agent.enable = true;
 
