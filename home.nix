@@ -104,7 +104,6 @@ in
 
   fonts.fontconfig.enable = true;
 
-
   xdg.configFile."sway/config".source = config.lib.file.mkOutOfStoreSymlink "~/.config/sway/config";
   xdg.configFile."waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "~/.config/waybar/style.css";
   xdg.configFile."waybar/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink "~/.config/waybar/config.jsonc";
