@@ -270,10 +270,12 @@ mouse_warping container
 
 
 for_window [title="rofi"] blur enable
-layer_effects "rofi" blur enable
 # SwayFX stuff
+layer_effects "rofi" blur enable
 blur enable
 blur_xray disable
 blur_passes 2
 blur_radius 10
 blur_contrast 1.4
+corner_radius 7
+smart_corner_radius enable
