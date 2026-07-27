@@ -243,7 +243,6 @@ bindsym $mod+d mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-	status_command waybar
 }
 include /etc/sway/config.d/*
 
