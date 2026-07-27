@@ -37,7 +37,7 @@ in
     };
   };
 
-  services.wayabr.enable = true;
+  programs.wayabr.enable = true;
 
   services.swaync = {
     enable = true;
