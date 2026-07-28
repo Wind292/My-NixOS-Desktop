@@ -18,6 +18,8 @@
   boot.kernelParams = [
     "pcie_aspm=off"
   ];
+  
+ programs.xwayland.enable = true; 
 
   hardware.nvidia.powerManagement.enable = false;
 
