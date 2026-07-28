@@ -15,6 +15,8 @@
 	enable32Bit = true;
   };
 
+  hardware.nvidia.powerManagement.enable = true;
+
   programs.steam.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
