@@ -22,6 +22,8 @@ in
     };
   };
 
+  services.mpris-proxy.enable = true; 
+
   programs.firefox = {
     enable = true;
     configPath = ".mozilla/firefox";
