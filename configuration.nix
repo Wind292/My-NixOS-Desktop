@@ -27,10 +27,11 @@
 
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
+    powerManagement.finegrained = false;
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   }; 
 
   services.dbus.enable = true;
