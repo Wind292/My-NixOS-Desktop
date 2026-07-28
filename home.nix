@@ -173,6 +173,8 @@ in
     libnotify
     aonsoku
     vanilla-dmz
+    mangohud
+    furmark
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
