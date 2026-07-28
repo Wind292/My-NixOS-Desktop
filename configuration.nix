@@ -15,16 +15,20 @@
 	enable32Bit = true;
   };
 
-  hardware.nvidia.powerManagement.enable = true;
+  boot.kernelParams = [
+    "pcie_aspm=off"
+  ];
+
+  hardware.nvidia.powerManagement.enable = false;
 
   programs.steam.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
-    hardware.nvidia = {
+  hardware.nvidia = {
     modesetting.enable = true;
-    open = true;
+    open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   }; 
 
   services.dbus.enable = true;
