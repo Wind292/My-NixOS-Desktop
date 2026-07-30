@@ -121,6 +121,8 @@ in
   xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
   xdg.configFile."hypr/hyprland.lua".source = ./hypr/hyprland.lua;
   xdg.configFile."hypr/local.lua".source = ./hypr/local.lua;
+  xdg.configFile."hyprland-preview-share-picker/config.yaml".source = ./hyprland-preview-share-picker/config.yaml;
+  xdg.configFile."hypr/xdph.conf".source = ./hypr/xdph.conf;
 
   home.packages = with pkgs; [
     alacritty
