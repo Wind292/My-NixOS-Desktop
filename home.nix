@@ -119,6 +119,8 @@ in
   xdg.configFile."sway/config".source = ./sway/config;
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
   xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
+  xdg.configFile."hypr/hyprland.lua".source = ./hypr/hyprland.lua;
+  xdg.configFile."hypr/local.lua".source = ./hypr/local.lua;
 
   home.packages = with pkgs; [
     alacritty
