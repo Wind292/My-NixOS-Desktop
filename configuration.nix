@@ -33,10 +33,11 @@ in
   security.polkit.enable = true;
   
   programs.xwayland.enable = true; 
-programs.obs-studio = {
-  enable = true;
-  enableVirtualCamera = true;
-};
+
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+  };
 
 
   hardware.nvidia.powerManagement.enable = false;
@@ -111,15 +112,15 @@ programs.obs-studio = {
   #  enable = true;
   #  pulse.enable = true;
   #};
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  alsa.support32Bit = true;
-  pulse.enable = true;
-  jack.enable = true;
-  wireplumber.enable = true;
-};
-security.rtkit.enable = true;  
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
+  };
+  security.rtkit.enable = true;  
 
 
 
