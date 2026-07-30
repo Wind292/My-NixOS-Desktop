@@ -103,9 +103,6 @@ in
       };
     };
   };
-  environment.systemPackages = [
-    inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
 
   # xdg.portal = {
   #   enable = true;
@@ -184,6 +181,7 @@ in
     tailscale
     slurp
     waybar
+    inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
