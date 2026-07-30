@@ -181,6 +181,7 @@ in
     hyprpaper
     hyprlock
     hypridle
+    xdg-desktop-portal-hyprland
   ];
 
 programs.hyprlock = {
