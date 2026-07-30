@@ -103,39 +103,6 @@ in
     };
   };
 
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-  #   config = {
-  #     common.default = [ "hyprland" ];
-  #     hyprland.default = [ "hyprland" ];
-  #   };
-  # };
-  # xdg.portal = {
-  #   # enable = true;
-  #   # config = {common = {default = "wlr";};};
-  #   # wlr.enable = true;
-  #   wlr.settings.screencast = {
-  #     chooser_type = "simple";
-  #     chooser_cmd = "slurp -f %o -or";#"${pkgs.slurp}/bin/slurp -f %o -or";
-  #   };
-  #   # extraPortals = [
-  #   #     pkgs.xdg-desktop-portal-gtk # gtk portal needed to make gtk apps happy
-  #   # ];
-
-
-  #   enable = true;
-  #   xdgOpenUsePortal = true;
-  #   config = {
-  #     common.default = ["gtk"];
-  #     hyprland.default = ["gtk" "hyprland"];
-  #   };
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-gtk
-  #     pkgs.xdg-desktop-portal-hyprland
-  #   ];
-  # };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -180,7 +147,7 @@ in
     tailscale
     slurp
     waybar
-    # inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
