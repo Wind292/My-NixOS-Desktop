@@ -24,16 +24,16 @@ in
 
 
 
-  xdg.portal = {
-    enable = true;
-    config = {common = {default = "wlr";};};
+  #xdg.portal = {
+  #  enable = true;
+  #  config = {common = {default = "wlr";};};
   #  wlr.enable = true;
-    wlr.settings.screencast = {
-      output_name = "DP-2";
-      chooser_type = "simple";
-      chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
-    };
-  };
+  #  wlr.settings.screencast = {
+  #    output_name = "DP-2";
+  #    chooser_type = "simple";
+  #    chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
+  #  };
+  #};
 
 
 
