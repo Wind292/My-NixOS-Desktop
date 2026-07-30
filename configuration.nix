@@ -180,7 +180,7 @@ in
     tailscale
     slurp
     waybar
-    inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
