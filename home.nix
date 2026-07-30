@@ -11,7 +11,7 @@ in
   #screen sharing
   #xdg.portal = {
   #  enable = true;
-  #  # config.common.default = "wlr";
+  #  config.common.default = "wlr";
   #  extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
   #  config = {
   #    sway = {

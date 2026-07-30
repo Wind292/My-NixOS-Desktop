@@ -92,10 +92,12 @@ in
   xdg = {  
     portal = with pkgs;{
       enable = true;
+      wlr.enable = true;
       xdgOpenUsePortal = true;
       extraPortals = [
         xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
+	pkgs.xdg-desktop-portal-wlr
       ];
       config = {
         common.default = "*";
