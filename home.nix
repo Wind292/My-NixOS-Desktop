@@ -205,7 +205,7 @@ programs.hyprlock = {
         color = "rgba(255, 255, 255, 1)";
         font_size = 90;
         font_family = "JetBrainsMono Nerd Font";
-        position = "0, -100";
+        position = "0, 0";
         halign = "right";
         valign = "top";
       }
@@ -214,7 +214,7 @@ programs.hyprlock = {
         color = "rgba(255, 255, 255, 0.8)";
         font_size = 24;
         font_family = "JetBrainsMono Nerd Font";
-        position = "0, -250";
+        position = "0, -350";
         halign = "right";
         valign = "top";
       }
@@ -222,7 +222,7 @@ programs.hyprlock = {
 
     input-field = [
       {
-        size = "300, 70";
+        size = "1000, 100";
         position = "0, -80";
         monitor = "";
         dots_center = true;
