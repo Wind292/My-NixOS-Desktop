@@ -4,6 +4,10 @@
 
 { config, lib, pkgs, ... }:
 
+let 
+  isUEFI = builtins.pathExists "/sys/firmware/efi/";
+  vars = import ./vars.nix;
+in 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -17,9 +21,23 @@
 
   boot.kernelParams = [
     "pcie_aspm=off"
+    "v4l2loopback"
   ];
+   # Enable v4l2loopback kernel module
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="Virtual Cam" exclusive_caps=1
+  '';
+
+  # Required for OBS or user-space tools to manage the device
+  security.polkit.enable = true;
   
- programs.xwayland.enable = true; 
+  programs.xwayland.enable = true; 
+programs.obs-studio = {
+  enable = true;
+  enableVirtualCamera = true;
+};
+
 
   hardware.nvidia.powerManagement.enable = false;
 
@@ -37,16 +55,19 @@
   services.dbus.enable = true;
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader = if isUEFI then {	
+  	systemd-boot.enable = true;
+  	efi.canTouchEfiVariables = true;
+  } else {  
+	grub.enable = true;
+  	grub.device = "/dev/sdb";
+  };
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "luna-nixos"; # Define your hostname.
+  networking.hostName = vars.hostname; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
 
   hardware.bluetooth = {
         enable = true;
@@ -71,10 +92,13 @@
     config = {common = {default = "wlr";};};
     wlr.enable = true;
     wlr.settings.screencast = {
-      output_name = "DP-2";
-      chooser_type = "simple";
-      chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
+      #output_name = "DP-2";
+   #   chooser_type = "simple";
+  #    chooser_cmd = "slurp -f %o -or";#"${pkgs.slurp}/bin/slurp -f %o -or";
     };
+      extraPortals = [
+    pkgs.xdg-desktop-portal-gtk # gtk portal needed to make gtk apps happy
+  ];
   };
 
   # Enable CUPS to print documents.
@@ -83,11 +107,22 @@
   services.openssh.enable = true;  
 
   # Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-  
+  #services.pipewire = {
+  #  enable = true;
+  #  pulse.enable = true;
+  #};
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  jack.enable = true;
+  wireplumber.enable = true;
+};
+security.rtkit.enable = true;  
+
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jp3 = {
     isNormalUser = true;
@@ -123,14 +158,14 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  systemd.services.hid-apple-fnmode = {
-    wantedBy = [ "multi-user.target" ];
-    description = "set hid_apple fnmode";
-    serviceConfig = {
-        Type = "oneshot";
- 	      ExecStart = "${pkgs.bash}/bin/bash -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'";
-    };
-  };
+#  systemd.services.hid-apple-fnmode = {
+#    wantedBy = [ "multi-user.target" ];
+#    description = "set hid_apple fnmode";
+#    serviceConfig = {
+#        Type = "oneshot";
+# 	      ExecStart = "${pkgs.bash}/bin/bash -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'";
+#    };
+#  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -165,8 +200,8 @@
 	"nix-command"
 	"flakes"
   ];
-  boot.extraModprobeConfig = ''
-    options hid_apple fnmde=2
-  '';
+  #boot.extraModprobeConfig = ''
+  #   options hid_apple fnmde=2
+  #'';
 }
 

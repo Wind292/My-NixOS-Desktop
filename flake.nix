@@ -13,8 +13,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-editor, ... }@inputs: {
-    nixosConfigurations.luna-nixos = nixpkgs.lib.nixosSystem {
+  outputs = inputs@{ self, nixpkgs, home-manager, nix-editor, ... }: 
+    let 
+      vars = import ./vars.nix;
+    in {
+    nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix

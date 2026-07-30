@@ -1,7 +1,7 @@
 {
     "position": "top",
 
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "hyprland/workspaces"],
     "modules-center": ["mpris"],
     "modules-right": ["tray", "clock"],
 

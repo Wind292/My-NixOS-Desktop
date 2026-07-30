@@ -24,6 +24,7 @@ in
 
   services.mpris-proxy.enable = true; 
 
+
   programs.firefox = {
     enable = true;
     configPath = ".mozilla/firefox";
@@ -72,7 +73,7 @@ in
       };
       interactiveShellInit = ''
         set -g fish_greeting
-        ssh-add -q ~/.ssh/id_ed25519.pub
+        ssh-add -q ~/.ssh/sshkey
 
         function rebuild 
           sudo git -C /etc/nixos/ add . 
@@ -175,6 +176,10 @@ in
     vanilla-dmz
     mangohud
     furmark
+    obs-studio
+    hyprpaper
+    hyprlock
+    hypridle
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

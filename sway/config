@@ -21,10 +21,10 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /home/jp3/old/.config/hypr/hk.png fill
+# output * bg /home/jp3/old/.config/hypr/hk.png fill
 
-output HDMI-A-1 pos 0 0 mode 2560x1440@144Hz
-output DP-2 pos 2560 0 mode 3440x1440@100Hz 
+output HDMI-A-2 pos 1920 0 mode 2560x1440@144Hz
+output DP-2 pos 0 0 mode 1920x1080@60Hz 
 
 #output HDMI-A-1 {
 #	mode 2560x1440@144Hz
