@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    hyprland-preview-share-picker.url = "github:WhySoBad/hyprland-preview-share-picker";
+    # hyprland-preview-share-picker.url = "github:WhySoBad/hyprland-preview-share-picker";
 
     nix-editor.url = "github:snowfallorg/nix-editor";
     nix-editor.inputs.nixpkgs.follows = "nixpkgs";
