@@ -87,20 +87,58 @@ in
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
-  xdg.portal = {
-    enable = true;
-    config = {common = {default = "wlr";};};
-    wlr.enable = true;
-    wlr.settings.screencast = {
-      #output_name = "DP-2";
-   #   chooser_type = "simple";
-  #    chooser_cmd = "slurp -f %o -or";#"${pkgs.slurp}/bin/slurp -f %o -or";
-    };
+  xdg = {  
+    portal = with pkgs;{
+      enable = true;
+      xdgOpenUsePortal = true;
       extraPortals = [
-    pkgs.xdg-desktop-portal-gtk # gtk portal needed to make gtk apps happy
-  ];
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
+      ];
+      config = {
+        common.default = "*";
+        hyprland = {
+          default = [ "gtk" "hyprland" ];
+        };
+      };
+    };
   };
+  environment.systemPackages = [
+    inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  #   config = {
+  #     common.default = [ "hyprland" ];
+  #     hyprland.default = [ "hyprland" ];
+  #   };
+  # };
+  # xdg.portal = {
+  #   # enable = true;
+  #   # config = {common = {default = "wlr";};};
+  #   # wlr.enable = true;
+  #   wlr.settings.screencast = {
+  #     chooser_type = "simple";
+  #     chooser_cmd = "slurp -f %o -or";#"${pkgs.slurp}/bin/slurp -f %o -or";
+  #   };
+  #   # extraPortals = [
+  #   #     pkgs.xdg-desktop-portal-gtk # gtk portal needed to make gtk apps happy
+  #   # ];
+
+
+  #   enable = true;
+  #   xdgOpenUsePortal = true;
+  #   config = {
+  #     common.default = ["gtk"];
+  #     hyprland.default = ["gtk" "hyprland"];
+  #   };
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gtk
+  #     pkgs.xdg-desktop-portal-hyprland
+  #   ];
+  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
