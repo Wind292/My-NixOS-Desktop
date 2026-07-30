@@ -214,7 +214,7 @@ programs.hyprlock = {
         color = "rgba(255, 255, 255, 0.8)";
         font_size = 24;
         font_family = "JetBrainsMono Nerd Font";
-        position = "0, -350";
+        position = "0, -150";
         halign = "right";
         valign = "top";
       }
