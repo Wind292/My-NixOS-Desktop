@@ -199,19 +199,39 @@ programs.hyprlock = {
       }
     ];
 
+    label = [
+      {
+        text = "cmd[update:1000] echo \"$(date +'%H:%M')\"";
+        color = "rgba(255, 255, 255, 1)";
+        font_size = 90;
+        font_family = "JetBrainsMono Nerd Font";
+        position = "0, -300";
+        halign = "right";
+        valign = "top";
+      }
+      {
+        text = "cmd[update:1000] echo \"$(date +'%A, %B %d')\"";
+        color = "rgba(255, 255, 255, 0.8)";
+        font_size = 24;
+        font_family = "JetBrainsMono Nerd Font";
+        position = "0, -390";
+        halign = "right";
+        valign = "top";
+      }
+    ];
+
     input-field = [
       {
-        size = "200, 50";
+        size = "300, 70";
         position = "0, -80";
         monitor = "";
         dots_center = true;
         fade_on_empty = false;
         font_color = "rgb(202, 211, 245)";
-	font_size = 20;
         inner_color = "rgb(91, 96, 120)";
         outer_color = "rgb(24, 25, 38)";
         outline_thickness = 0;
-        placeholder_text = "Password...";
+        placeholder_text = "";
         shadow_passes = 2;
       }
     ];
