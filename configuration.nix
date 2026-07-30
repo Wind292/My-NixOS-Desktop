@@ -68,6 +68,9 @@ in
   networking.hostName = vars.hostname; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
+  networking.networkmanager.enable = vars.do_wireless_networking;
+  
+
 
   hardware.bluetooth = {
         enable = true;
@@ -129,7 +132,10 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jp3 = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ 
+       "wheel"
+       "networkmanager" 
+    ]; 
     shell = pkgs.fish;
     packages = with pkgs; [
         tree
