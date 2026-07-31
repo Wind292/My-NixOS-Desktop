@@ -42,3 +42,8 @@ window#waybar {
     background-color: rgba(70, 70, 82, 0);   /* focused_workspace background: #46465200 */
     color: rgba(255, 255, 255, 1);           /* focused_workspace text: #ffffff */
 }
+
+#custom-swaync {
+    padding: 0 10px;
+}
+
