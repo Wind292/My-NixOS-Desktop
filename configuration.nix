@@ -117,7 +117,7 @@ in
 		default = ["gtk" "hyprland"];
   		"org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
   		"org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
-	}
+	};
 
     };
     extraPortals = [
