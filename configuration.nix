@@ -120,6 +120,11 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+  };
+
   services.openssh.enable = true;  
 
   # Enable sound.
