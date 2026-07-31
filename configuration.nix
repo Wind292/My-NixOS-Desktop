@@ -106,18 +106,28 @@ in
   #    };
   #  };
   #};
-  #xdg.portal = {
-  #  enable = true;
-  #  xdgOpenUsePortal = true;
-  #  config = {
-  #      common.default = ["gtk"];
-  #      hyprland.default = ["gtk" "hyprland"];
-  #  };
-  #  extraPortals = [
-  #    pkgs.xdg-desktop-portal-hyprland
-  #  ];
-  #};
-  # Enable CUPS to print documents.
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+        common.default = ["gtk"];
+        hyprland.default = ["gtk" "hyprland"];
+	hyprland = {
+		default = ["gtk" "hyprland"];
+  		"org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
+  		"org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
+	}
+
+    };
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+    ];
+  }; 
+  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
+ 
+
+ # Enable CUPS to print documents.
   services.printing.enable = true;
 
   programs.hyprland = {
