@@ -47,5 +47,7 @@ window#waybar {
     padding: 0 10px;
     font-family: "JetBrainsMono Nerd Font", "Noto Sans Symbols 2", "Noto Color Emoji", sans-serif;
     background-color: rgba(65, 60, 75, 30); 
+    border-radius: 7px;
+    margin-left: 5px;
 }
 
