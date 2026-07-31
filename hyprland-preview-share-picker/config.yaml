@@ -1,25 +1,25 @@
 # paths to stylesheets on the filesystem which should be applied to the application
 #
 # relative paths are resolved relative to the location of the config file
-stylesheets: []
+stylesheets: [style.css]
 # default page selected when the picker is opened
 default_page: windows
 
 window:
   # height of the application window
-  height: 500
+  height: 1000
   # width of the application window
-  width: 1000
+  width: 2000
 
 image:
   # size to which the images should be internally resized to reduce the memory footprint
-  resize_size: 200
+  resize_size: 1000
   # target size of the longer side of the image widget
   widget_size: 150
 
 classes:
   # css classname of the window
-  window: window
+  window: outputs
   # css classname of the card containing an image and a label
   image_card: card
   # css classname of the card containing an image and a label when the image is still being loaded
