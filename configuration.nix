@@ -89,55 +89,6 @@ in
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-  #xdg = {  
-  #  portal = with pkgs;{
-  #    enable = true;
-  #    wlr.enable = true;
-  #    xdgOpenUsePortal = true;
-  #    extraPortals = [
-  #      xdg-desktop-portal-gtk
-  #      xdg-desktop-portal-hyprland
-  #    ];
-  #    config = {
-  #      common.default = "*";
-  #      hyprland = {
-  #        default = [ "gtk" "hyprland" ];
-  #      };
-  #    };
-  #  };
-  #};
-
-#  xdg.portal = {
-#    enable = true;
-#    xdgOpenUsePortal = true;
-#    config = {
-#        common.default = ["gtk"];
-#	hyprland = {
-#		default = ["gtk" "hyprland"];
-#  		"org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
-#  		"org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
-#	};
-#
-#    };
-#    extraPortals = [
-#      pkgs.xdg-desktop-portal-hyprland
-#    ];
-#  }; 
-
-  xdg = {
-    portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-      config = {
-        common.default = ["gtk"];
-        hyprland.default = ["gtk" "hyprland"];
-      };
-      extraPortals = [
-        pkgs.xdg-desktop-portal-gtk
-        pkgs.xdg-desktop-portal-hyprland
-      ];
-    };
-  };
 
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
  

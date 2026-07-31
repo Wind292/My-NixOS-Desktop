@@ -8,45 +8,22 @@ in
   home.username = "jp3";
   home.homeDirectory = "/home/jp3";
 
-  #screen sharing
-  #xdg.portal = {
-  #  enable = true;
-  #  config.common.default = "wlr";
-  #  extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
-  #  config = {
-  #    sway = {
-  #      default = [ "wlr" "gtk" ];
-  #      "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
-  #      "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
-  #    };
-  #  };
-  #};
+  # Screensharing
+  xdg = {
+    portal = {
+      enable = true;
+      xdgOpenUsePortal = true;
+      config = {
+        common.default = ["gtk"];
+        hyprland.default = ["gtk" "hyprland"];
+      };
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+      ];
+    };
+  };
 
-
-
-  #xdg.portal = {
-  #  enable = true;
-  #  config = {common = {default = "wlr";};};
-  #  wlr.enable = true;
-  #  wlr.settings.screencast = {
-  #    output_name = "DP-2";
-  #    chooser_type = "simple";
-  #    chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
-  #  };
-  #};
-
-
-  #xdg.portal = {
-  #  enable = true;
-  #  xdgOpenUsePortal = true;
-  #  config = {
-  #      common.default = ["gtk"];
-  #      hyprland.default = ["gtk" "hyprland"];
-  #  };
-  #  extraPortals = [ 
-  #    pkgs.xdg-desktop-portal-hyprland 
-  #  ];
-  #};
 
   services.mpris-proxy.enable = true; 
 
