@@ -6,6 +6,8 @@
 
     hyprland-preview-share-picker.url = "git+https://github.com/WhySoBad/hyprland-preview-share-picker?submodules=1"; 
 
+    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
+
     nix-editor.url = "github:snowfallorg/nix-editor";
     nix-editor.inputs.nixpkgs.follows = "nixpkgs";
 

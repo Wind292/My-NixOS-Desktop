@@ -131,6 +131,7 @@ in
       config = {
         common.default = ["gtk"];
         hyprland.default = ["gtk" "hyprland"];
+	hyprland = "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
       };
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
@@ -138,7 +139,6 @@ in
       ];
     };
   };
-
 
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
  
