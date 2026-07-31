@@ -89,23 +89,23 @@ in
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-  xdg = {  
-    portal = with pkgs;{
-      enable = true;
-      wlr.enable = true;
-      xdgOpenUsePortal = true;
-      extraPortals = [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
-      ];
-      config = {
-        common.default = "*";
-        hyprland = {
-          default = [ "gtk" "hyprland" ];
-        };
-      };
-    };
-  };
+  #xdg = {  
+  #  portal = with pkgs;{
+  #    enable = true;
+  #    wlr.enable = true;
+  #    xdgOpenUsePortal = true;
+  #    extraPortals = [
+  #      xdg-desktop-portal-gtk
+  #      xdg-desktop-portal-hyprland
+  #    ];
+  #    config = {
+  #      common.default = "*";
+  #      hyprland = {
+  #        default = [ "gtk" "hyprland" ];
+  #      };
+  #    };
+  #  };
+  #};
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
