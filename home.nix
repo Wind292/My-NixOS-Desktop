@@ -36,17 +36,17 @@ in
   #};
 
 
-  #xdg.portal = {
-  #  enable = true;
-  #  xdgOpenUsePortal = true;
-  #  config = {
-  #      common.default = ["gtk"];
-  #      hyprland.default = ["gtk" "hyprland"];
-  #  };
-  #  extraPortals = [ 
-  #    pkgs.xdg-desktop-portal-hyprland 
-  #  ];
-  #};
+ # xdg.portal = {
+ #   enable = true;
+ #   xdgOpenUsePortal = true;
+ #   config = {
+ #       common.default = ["gtk"];
+ #       hyprland.default = ["gtk" "hyprland"];
+ #   };
+ #   extraPortals = [ 
+ #     pkgs.xdg-desktop-portal-hyprland 
+ #   ];
+ # };
 
 
   programs.hyprland = {
@@ -66,7 +66,7 @@ in
     enable = true;
     settings = {
       General = {
-       # disabledTrayIcon = true;
+        disabledTrayIcon = true;
         showStartupLaunchMessage = false;
       };
     };
