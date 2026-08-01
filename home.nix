@@ -188,6 +188,7 @@ in
     hyprlock
     hypridle
     xdg-desktop-portal-hyprland
+    localsend
   ];
 
 programs.hyprlock = {
