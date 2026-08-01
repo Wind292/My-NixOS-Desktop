@@ -1,3 +1,3 @@
 {
-  hostname = "luna-nixos";
+  hostname = "darryl-nixos";
 }
