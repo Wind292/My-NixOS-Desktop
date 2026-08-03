@@ -60,7 +60,7 @@ in
   	efi.canTouchEfiVariables = true;
   } else {  
 	grub.enable = true;
-  	grub.device = "/dev/sdb";
+  	grub.device = "/dev/sda";
   };
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
