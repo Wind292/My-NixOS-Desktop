@@ -192,6 +192,7 @@ in
     jetbrains.idea
     openjdk25
     android-studio-full
+    devenv
   ];
 
 programs.hyprlock = {
