@@ -191,6 +191,7 @@ in
     localsend
     jetbrains.idea
     openjdk25
+    android-studio-full
   ];
 
 programs.hyprlock = {
