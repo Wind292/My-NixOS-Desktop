@@ -118,6 +118,7 @@ in
   };
   security.rtkit.enable = true;  
 
+  android.enable = true;
 
   services.tailscale.enable = true;
 
