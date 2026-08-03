@@ -124,7 +124,7 @@ in
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
   xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
   xdg.configFile."hypr/hyprland.lua".source = ./hypr/hyprland.lua;
-  xdg.configFile."hypr/local.lua".source = ./hypr/local.lua;
+  #xdg.configFile."hypr/local.lua".source = ./hypr/local.lua;
   xdg.configFile."hyprland-preview-share-picker/style.css".source = ./hyprland-preview-share-picker/style.css;
   xdg.configFile."hyprland-preview-share-picker/config.yaml".source = ./hyprland-preview-share-picker/config.yaml;
   xdg.configFile."hypr/xdph.conf".source = ./hypr/xdph.conf;
