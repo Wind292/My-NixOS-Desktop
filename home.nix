@@ -189,6 +189,7 @@ in
     hypridle
     xdg-desktop-portal-hyprland
     localsend
+    jetbrains.idea-oss
   ];
 
 programs.hyprlock = {
