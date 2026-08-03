@@ -60,6 +60,8 @@ in
     };
   };
 
+  services.flatpak.enable = true;
+
   home.pointerCursor = {
 	enable = true;
 	name = "DMZ-Black";
