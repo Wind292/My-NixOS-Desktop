@@ -190,6 +190,7 @@ in
     xdg-desktop-portal-hyprland
     localsend
     jetbrains.idea
+    openjdk25
   ];
 
 programs.hyprlock = {
