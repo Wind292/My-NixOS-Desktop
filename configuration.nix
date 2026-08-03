@@ -120,6 +120,8 @@ in
 
   services.tailscale.enable = true;
 
+  services.flatpak.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jp3 = {
     isNormalUser = true;

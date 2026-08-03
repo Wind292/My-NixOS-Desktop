@@ -60,7 +60,6 @@ in
     };
   };
 
-  services.flatpak.enable = true;
 
   home.pointerCursor = {
 	enable = true;
@@ -195,6 +194,7 @@ in
     openjdk25
     android-studio-full
     devenv
+    flatpak
   ];
 
 programs.hyprlock = {
