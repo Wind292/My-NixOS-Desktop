@@ -18,11 +18,6 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/boot" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
