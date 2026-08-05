@@ -122,6 +122,13 @@ in
 
   services.flatpak.enable = true;
 
+  services.avahi = {
+	enable = true;
+	nssdns4 = true;
+	openFirewall = true;
+  };
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jp3 = {
     isNormalUser = true;
