@@ -58,11 +58,10 @@ in
   boot.loader = if isUEFI then {	
   	systemd-boot.enable = true;
   	efi.canTouchEfiVariables = true;
+  } else {  
+	grub.enable = true;
+  	grub.device = "/dev/sda";
   };
- #else {  
-	#grub.enable = true;
-  	#grub.device = "/dev/sda";
- # };
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
