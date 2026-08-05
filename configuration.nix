@@ -58,7 +58,8 @@ in
   boot.loader = if isUEFI then {	
   	systemd-boot.enable = true;
   	efi.canTouchEfiVariables = true;
-  } #else {  
+  };
+ #else {  
 	#grub.enable = true;
   	#grub.device = "/dev/sda";
  # };
