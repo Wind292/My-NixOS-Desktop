@@ -125,8 +125,13 @@ in
   services.avahi = {
 	enable = true;
 	openFirewall = true;
-  };
 
+  	publish = {
+    		enable = true;
+    		userServices = true;
+  	};
+
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jp3 = {
