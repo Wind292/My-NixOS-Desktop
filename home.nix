@@ -194,6 +194,7 @@ in
     devenv
     flatpak
     zoom-us
+    unzip
   ];
 
 programs.hyprlock = {
