@@ -195,6 +195,8 @@ in
     flatpak
     zoom-us
     unzip
+    glib
+    protontricks
   ];
 
 programs.hyprlock = {
