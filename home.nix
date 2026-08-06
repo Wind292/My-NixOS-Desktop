@@ -197,6 +197,7 @@ in
     unzip
     glib
     protontricks
+    playerctl
   ];
 
 programs.hyprlock = {
