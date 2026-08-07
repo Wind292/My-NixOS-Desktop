@@ -282,7 +282,7 @@ services.hypridle = {
 xdg.mimeApps = {
   enable = true;
   defaultApplications = {
-    "inode/directory" = [ "kdePackages.dolphin" ];
+    "inode/directory" = [ "org.kde.dolphin.desktop" ];
   };
 };
 
