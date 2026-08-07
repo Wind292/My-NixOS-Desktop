@@ -22,11 +22,12 @@
 	"format": "{player_icon} {dynamic}",
 	"format-paused": "{status_icon} <i>{dynamic}</i>",
 	"player-icons": {
-		"default": "▶",
+		//"default": "▶",
 		"mpv": "🎵"
 	},
 	"status-icons": {
-		"paused": "⏸"
+		"default": "▶"
+//		"paused": "⏸"
 	}
 	// "ignored-players": ["firefox"]
     },
