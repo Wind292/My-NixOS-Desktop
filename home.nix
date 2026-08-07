@@ -198,6 +198,7 @@ in
     glib
     protontricks
     playerctl
+    kdePackages.dolphin
   ];
 
 programs.hyprlock = {
@@ -277,6 +278,15 @@ services.hypridle = {
     ];
   };
 };
+
+xdg.mimeApps = {
+  enable = true;
+  defaultApplications = {
+    "inode/directory" = [ "kdePackages.dolphin" ];
+  };
+};
+
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
