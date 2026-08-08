@@ -19,11 +19,6 @@
     };
 
   fileSystems."/boot" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
-  fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/B091-90CF";
       fsType = "vfat";
       options = [ "fmask=0177" "dmask=0077" ];
