@@ -1,4 +1,4 @@
 {
-  hostname = "luna-nixos";
-  do_wireless_networking = true;
+  hostname = "darryl-nixos";
+  do_wireless_networking = false;
 }
