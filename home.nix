@@ -199,6 +199,7 @@ in
     protontricks
     playerctl
     kdePackages.dolphin
+    dmidecode
   ];
 
 programs.hyprlock = {
