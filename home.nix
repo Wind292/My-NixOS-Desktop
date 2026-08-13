@@ -200,6 +200,7 @@ in
     playerctl
     kdePackages.dolphin
     dmidecode
+    celluloid
   ];
 
 programs.hyprlock = {
