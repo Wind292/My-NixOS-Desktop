@@ -1,4 +1,4 @@
 {
   hostname = "darryl-nixos";
-  do_wireless_networking = true;
+  do_wireless_networking = false;
 }
