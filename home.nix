@@ -203,6 +203,7 @@ in
     celluloid
     macchanger
     pnpm
+    nodejs
   ];
 
 programs.hyprlock = {
