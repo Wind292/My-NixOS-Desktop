@@ -201,6 +201,8 @@ in
     kdePackages.dolphin
     dmidecode
     celluloid
+    macchanger
+    pnpm
   ];
 
 programs.hyprlock = {
