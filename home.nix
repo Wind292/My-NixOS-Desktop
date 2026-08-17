@@ -205,6 +205,7 @@ in
     pnpm
     nodejs
     libglvnd
+    hyprshot
   ];
 
 programs.hyprlock = {
