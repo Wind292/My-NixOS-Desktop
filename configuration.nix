@@ -165,7 +165,6 @@ in
 
 environment.sessionVariables = {
   LD_LIBRARY_PATH = lib.makeLibraryPath [
-    pkgs.libglvnd
     pkgs.pulseaudio
   ];
 };
