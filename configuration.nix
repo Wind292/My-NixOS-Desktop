@@ -217,5 +217,21 @@ in
   #boot.extraModprobeConfig = ''
   #   options hid_apple fnmde=2
   #'';
+
+programs.nix-ld.enable = true;
+programs.nix-ld.libraries = with pkgs; [
+  libGL
+  libglvnd
+  xorg.libX11
+  xorg.libXrandr
+  xorg.libXinerama
+  xorg.libXcursor
+  xorg.libXi
+  xorg.libXext
+  glfw
+  openal
+  stdenv.cc.cc.lib
+];
+
 }
 
