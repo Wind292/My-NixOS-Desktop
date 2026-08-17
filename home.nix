@@ -328,6 +328,10 @@ xdg.mimeApps = {
   home.sessionVariables = {
      EDITOR = "vim";
      NIXOS_OZONE_WL = "1";
+     LD_LIBRARY_PATH = lib.makeLibraryPath [
+        pkgs.libglvnd
+        pkgs.pulseaudio
+    ];
   };
 
   # Let Home Manager install and manage itself.
