@@ -161,6 +161,13 @@ in
     inputs.hyprland-preview-share-picker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
+
+  LD_LIBRARY_PATH = lib.makeLibraryPath [
+    pkgs.libglvnd
+    pkgs.pulseaudio
+  ];
+
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

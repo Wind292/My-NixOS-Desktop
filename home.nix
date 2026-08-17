@@ -204,6 +204,7 @@ in
     macchanger
     pnpm
     nodejs
+    libglvnd
   ];
 
 programs.hyprlock = {
