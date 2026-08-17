@@ -162,10 +162,15 @@ in
   ];
   
 
+
+environment.sessionVariables = {
   LD_LIBRARY_PATH = lib.makeLibraryPath [
     pkgs.libglvnd
     pkgs.pulseaudio
   ];
+};
+
+
 
 
   # Some programs need SUID wrappers, can be configured further or are
