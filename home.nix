@@ -204,6 +204,7 @@ in
     macchanger
     pnpm
     nodejs
+    openjdk
   ];
 
 programs.hyprlock = {
