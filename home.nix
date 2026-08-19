@@ -209,6 +209,7 @@ in
     zoxide
     sshfs
     go
+    gcc
   ];
 
 programs.hyprlock = {
