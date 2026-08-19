@@ -206,6 +206,9 @@ in
     nodejs
     libglvnd
     hyprshot
+    zoxide
+    sshfs
+    go
   ];
 
 programs.hyprlock = {
